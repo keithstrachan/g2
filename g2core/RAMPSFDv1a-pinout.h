@@ -30,8 +30,8 @@
  *
  */
 
-#ifndef RAMPS-FDv1a_pinout_h
-#define RAMPS-FDv1a_pinout_h
+#ifndef RAMPSFDv1a_pinout_h
+#define RAMPSFDv1a_pinout_h
 
 #include <MotatePins.h>
 
@@ -42,77 +42,77 @@
 
 // We don't have all of the inputs, so we don't define them.
 #define INPUT1_AVAILABLE 1
-#define INPUT2_AVAILABLE 1
-#define INPUT3_AVAILABLE 1
-#define INPUT4_AVAILABLE 1
-#define INPUT5_AVAILABLE 1
-#define INPUT6_AVAILABLE 1
-#define INPUT7_AVAILABLE 1
-#define INPUT8_AVAILABLE 1
-#define INPUT9_AVAILABLE 1
-#define INPUT10_AVAILABLE 1
-#define INPUT11_AVAILABLE 1
-#define INPUT12_AVAILABLE 1
-#define INPUT13_AVAILABLE 0
+#define INPUT2_AVAILABLE 1  // !CHECK!
+#define INPUT3_AVAILABLE 1  // !CHECK!
+#define INPUT4_AVAILABLE 1  // !CHECK!
+#define INPUT5_AVAILABLE 1  // !CHECK!
+#define INPUT6_AVAILABLE 1  // !CHECK!
+#define INPUT7_AVAILABLE 1  // !CHECK!
+#define INPUT8_AVAILABLE 1  // !CHECK!
+#define INPUT9_AVAILABLE 1  // !CHECK!
+#define INPUT10_AVAILABLE 1  // !CHECK!
+#define INPUT11_AVAILABLE 1  // !CHECK!
+#define INPUT12_AVAILABLE 1  // !CHECK!
+#define INPUT13_AVAILABLE 0  // !CHECK!
 
-#define ADC0_AVAILABLE 0
-#define ADC1_AVAILABLE 0
-#define ADC2_AVAILABLE 0
-#define ADC3_AVAILABLE 0
+#define ADC0_AVAILABLE 1  // !CHECK!
+#define ADC1_AVAILABLE 1  // !CHECK!
+#define ADC2_AVAILABLE 0  // !CHECK!
+#define ADC3_AVAILABLE 0  // !CHECK!
 
-#define XIO_HAS_USB 1
-#define XIO_HAS_UART 0
-#define XIO_HAS_SPI 0
-#define XIO_HAS_I2C 0
+#define XIO_HAS_USB 1  // !CHECK!
+#define XIO_HAS_UART 0  // !CHECK!
+#define XIO_HAS_SPI 0  // !CHECK!
+#define XIO_HAS_I2C 0  // !CHECK!
 
-#define TEMPERATURE_OUTPUT_ON 0
+//#define TEMPERATURE_OUTPUT_ON 0  // !CHECK!
 
 // Some pins, if the PWM capability is turned on, it will cause timer conflicts.
 // So we have to explicity enable them as PWM pins.
 // Generated with:
 // perl -e 'for($i=1;$i<14;$i++) { print "#define OUTPUT${i}_PWM 0\n";}'
-#define OUTPUT1_PWM 0
-#define OUTPUT2_PWM 0
-#define OUTPUT3_PWM 0
-#define OUTPUT4_PWM 0
-#define OUTPUT5_PWM 0
-#define OUTPUT6_PWM 0
-#define OUTPUT7_PWM 0
-#define OUTPUT8_PWM 0
-#define OUTPUT9_PWM 0
-#define OUTPUT10_PWM 0
-#define OUTPUT11_PWM 0
-#define OUTPUT12_PWM 0
-#define OUTPUT13_PWM 0
+#define OUTPUT1_PWM 0  // !CHECK!
+#define OUTPUT2_PWM 0  // !CHECK!
+#define OUTPUT3_PWM 0  // !CHECK!
+#define OUTPUT4_PWM 0  // !CHECK!
+#define OUTPUT5_PWM 0  // !CHECK!
+#define OUTPUT6_PWM 0  // !CHECK!
+#define OUTPUT7_PWM 0  // !CHECK!
+#define OUTPUT8_PWM 0  // !CHECK!
+#define OUTPUT9_PWM 0  // !CHECK!
+#define OUTPUT10_PWM 0  // !CHECK!
+#define OUTPUT11_PWM 0  // !CHECK!
+#define OUTPUT12_PWM 0  // !CHECK!
+#define OUTPUT13_PWM 0  // !CHECK!
 
 namespace Motate {
 
 // NOT ALL OF THESE PINS ARE ON ALL PLATFORMS
 // Undefined pins will be equivalent to Motate::NullPin, and return 1 for Pin<>::isNull();
 
-pin_number kSerial_RXPinNumber = 0;
-pin_number kSerial_TXPinNumber = 1;
+pin_number kSerial_RXPinNumber = 0;   // Verified
+pin_number kSerial_TXPinNumber = 1;   // Verified
 //    pin_number kSerial_RTSPinNumber                      =  8;   // added later
 //    pin_number kSerial_CTSPinNumber                      =  9;   // added later
 
-pin_number kSerial0_RX = 0;
-pin_number kSerial0_TX = 1;
+pin_number kSerial0_RX = 0;   // Verified
+pin_number kSerial0_TX = 1;   // Verified
 //    pin_number kSerial0_RTS                     =  8;   // added later
 //    pin_number kSerial0_CTS                     =  9;   // added later
 
-pin_number kI2C_SDAPinNumber = 20;
-pin_number kI2C_SCLPinNumber = 21;
+pin_number kI2C_SDAPinNumber = 20;   // Verified
+pin_number kI2C_SCLPinNumber = 21;   // Verified
 
-pin_number kI2C0_SDAPinNumber = 20;
-pin_number kI2C0_SCLPinNumber = 21;
+pin_number kI2C0_SDAPinNumber = 20;   // Verified
+pin_number kI2C0_SCLPinNumber = 21;   // Verified
 
-pin_number kSPI_SCKPinNumber  = 76;
-pin_number kSPI_MISOPinNumber = 74;
-pin_number kSPI_MOSIPinNumber = 75;
+pin_number kSPI_SCKPinNumber  = 76;   // Verified
+pin_number kSPI_MISOPinNumber = 74;   // Verified
+pin_number kSPI_MOSIPinNumber = 75;   // Verified
 
-pin_number kSPI0_SCKPinNumber  = 76;
-pin_number kSPI0_MISOPinNumber = 74;
-pin_number kSPI0_MOSIPinNumber = 75;
+pin_number kSPI0_SCKPinNumber  = 76;   // Verified
+pin_number kSPI0_MISOPinNumber = 74;   // Verified
+pin_number kSPI0_MOSIPinNumber = 75;   // Verified
 
 //    pin_number kX_StepPinNumber                 =  53;
 //    pin_number kX_DirPinNumber                  =  52;
@@ -133,66 +133,84 @@ pin_number kDebug4_PinNumber = -1;
 
 pin_number kKinen_SyncPinNumber = 53;
 
+// X Axis Socket
 pin_number kSocket1_SPISlaveSelectPinNumber = -1;  // 10;
 pin_number kSocket1_InterruptPinNumber      = -1;
-pin_number kSocket1_StepPinNumber           = 2;
-pin_number kSocket1_DirPinNumber            = 5;
-pin_number kSocket1_EnablePinNumber         = 22;
-pin_number kSocket1_Microstep_0PinNumber    = 23;
-pin_number kSocket1_Microstep_1PinNumber    = 24;
+pin_number kSocket1_StepPinNumber           = 63;
+pin_number kSocket1_DirPinNumber            = 62;
+pin_number kSocket1_EnablePinNumber         = 48;
+pin_number kSocket1_Microstep_0PinNumber    = -1;
+pin_number kSocket1_Microstep_1PinNumber    = -1;
 pin_number kSocket1_Microstep_2PinNumber    = -1;
 pin_number kSocket1_VrefPinNumber           = -1;  // 34; //PWMTimer<0>
 
-pin_number kSocket2_SPISlaveSelectPinNumber = 65;
+// Y Axis Socket
+pin_number kSocket2_SPISlaveSelectPinNumber = -1;
 pin_number kSocket2_InterruptPinNumber      = -1;
-pin_number kSocket2_StepPinNumber           = 3;
-pin_number kSocket2_DirPinNumber            = 6;
-pin_number kSocket2_EnablePinNumber         = 25;
-pin_number kSocket2_Microstep_0PinNumber    = 26;
-pin_number kSocket2_Microstep_1PinNumber    = 27;
+pin_number kSocket2_StepPinNumber           = 65;
+pin_number kSocket2_DirPinNumber            = 64;
+pin_number kSocket2_EnablePinNumber         = 46;
+pin_number kSocket2_Microstep_0PinNumber    = -1;
+pin_number kSocket2_Microstep_1PinNumber    = -1;
 pin_number kSocket2_Microstep_2PinNumber    = -1;
 pin_number kSocket2_VrefPinNumber           = -1;  // 62; //PWMTimer<1>
 
-pin_number kSocket3_SPISlaveSelectPinNumber = 52;
+// Z Axis Socket
+pin_number kSocket3_SPISlaveSelectPinNumber = -1;
 pin_number kSocket3_InterruptPinNumber      = -1;
-pin_number kSocket3_StepPinNumber           = 4;
-pin_number kSocket3_DirPinNumber            = 7;
-pin_number kSocket3_EnablePinNumber         = 28;
-pin_number kSocket3_Microstep_0PinNumber    = 29;
-pin_number kSocket3_Microstep_1PinNumber    = 30;
+pin_number kSocket3_StepPinNumber           = 67;
+pin_number kSocket3_DirPinNumber            = 66;
+pin_number kSocket3_EnablePinNumber         = 44;
+pin_number kSocket3_Microstep_0PinNumber    = -1;
+pin_number kSocket3_Microstep_1PinNumber    = -1;
 pin_number kSocket3_Microstep_2PinNumber    = -1;
 pin_number kSocket3_VrefPinNumber           = -1;  // 63; //PWMTimer<2>
 
-pin_number kSocket4_SPISlaveSelectPinNumber = 77;
+// E0 Socket
+pin_number kSocket4_SPISlaveSelectPinNumber = -1;
 pin_number kSocket4_InterruptPinNumber      = -1;
-pin_number kSocket4_StepPinNumber           = 31;
-pin_number kSocket4_DirPinNumber            = 32;
-pin_number kSocket4_EnablePinNumber         = 33;
-pin_number kSocket4_Microstep_0PinNumber    = 35;
-pin_number kSocket4_Microstep_1PinNumber    = 36;
+pin_number kSocket4_StepPinNumber           = 36;
+pin_number kSocket4_DirPinNumber            = 28;
+pin_number kSocket4_EnablePinNumber         = 42;
+pin_number kSocket4_Microstep_0PinNumber    = -1;
+pin_number kSocket4_Microstep_1PinNumber    = -1;
 pin_number kSocket4_Microstep_2PinNumber    = -1;
 pin_number kSocket4_VrefPinNumber           = -1;  // 64; //PWMTimer<3>
 
-pin_number kSocket5_SPISlaveSelectPinNumber = 78;
+// E1 Socket
+pin_number kSocket5_SPISlaveSelectPinNumber = -1;
 pin_number kSocket5_InterruptPinNumber      = -1;
-pin_number kSocket5_StepPinNumber           = 37;
-pin_number kSocket5_DirPinNumber            = 38;
+pin_number kSocket5_StepPinNumber           = 43;
+pin_number kSocket5_DirPinNumber            = 41;
 pin_number kSocket5_EnablePinNumber         = 39;
-pin_number kSocket5_Microstep_0PinNumber    = 40;
-pin_number kSocket5_Microstep_1PinNumber    = 41;
+pin_number kSocket5_Microstep_0PinNumber    = -1;
+pin_number kSocket5_Microstep_1PinNumber    = -1;
 pin_number kSocket5_Microstep_2PinNumber    = -1;
 pin_number kSocket5_VrefPinNumber           = -1;  // 66; //PWMTimer<3>
 
-pin_number kSocket6_SPISlaveSelectPinNumber = 50;
+// E2 Socket
+pin_number kSocket6_SPISlaveSelectPinNumber = -1;
 pin_number kSocket6_InterruptPinNumber      = -1;
-pin_number kSocket6_StepPinNumber           = 42;
-pin_number kSocket6_DirPinNumber            = 43;
-pin_number kSocket6_EnablePinNumber         = 44;
+pin_number kSocket6_StepPinNumber           = 32;
+pin_number kSocket6_DirPinNumber            = 47;
+pin_number kSocket6_EnablePinNumber         = 45;
 pin_number kSocket6_Microstep_0PinNumber    = -1;  // 45;
-pin_number kSocket6_Microstep_1PinNumber    = 46;
+pin_number kSocket6_Microstep_1PinNumber    = -1;
 pin_number kSocket6_Microstep_2PinNumber    = -1;
 pin_number kSocket6_VrefPinNumber           = -1;  // 67; //PWMTimer<0>
 
+pin_number kXAxis_MinPinNumber = 22;
+pin_number kXAxis_MaxPinNumber = 30;
+pin_number kYAxis_MinPinNumber = 24;
+pin_number kYAxis_MaxPinNumber = 38;
+pin_number kZAxis_MinPinNumber = 26;
+pin_number kZAxis_MaxPinNumber = 34;
+pin_number kAAxis_MinPinNumber = -1;
+pin_number kAAxis_MaxPinNumber = -1;
+pin_number kBAxis_MinPinNumber = -1;
+pin_number kBAxis_MaxPinNumber = -1;
+pin_number kCAxis_MinPinNumber = -1;
+pin_number kCAxis_MaxPinNumber = -1;
 
 pin_number kInput1_PinNumber = 14;
 pin_number kInput2_PinNumber = 15;
@@ -210,16 +228,16 @@ pin_number kInput12_PinNumber = 51;
 
 pin_number kSpindle_EnablePinNumber = 12;
 pin_number kSpindle_DirPinNumber    = -1;  // 13;
-pin_number kSpindle_PwmPinNumber    = 11;
-pin_number kSpindle_Pwm2PinNumber   = 9;
-pin_number kCoolant_EnablePinNumber = 57;
+pin_number kSpindle_PwmPinNumber    = 8;   // !CHECK!
+pin_number kSpindle_Pwm2PinNumber   = 9;  // !CHECK!
+pin_number kCoolant_EnablePinNumber = 10;  // !CHECK!
 
 pin_number kSD_CardDetectPinNumber = -1;
 pin_number kInterlock_InPinNumber  = -1;
 pin_number kOutputSAFE_PinNumber   = -1;  // SAFE signal
 
-pin_number kLED_USBRXPinNumber = 72;
-pin_number kLED_USBTXPinNumber = 73;
+pin_number kLED_USBRXPinNumber = 72;  // !CHECK!
+pin_number kLED_USBTXPinNumber = 73;  // !CHECK!
 
 
 pin_number kOutput1_PinNumber = -1;  // DO_1: Extruder1_PWM
@@ -260,9 +278,9 @@ pin_number kADC14_PinNumber = -1;  // Not physially pinned out
 
 // GRBL / gShield compatibility pins -- Due board ONLY
 
-pin_number kGRBL_ResetPinNumber      = 54;
-pin_number kGRBL_FeedHoldPinNumber   = 55;
-pin_number kGRBL_CycleStartPinNumber = 56;
+pin_number kGRBL_ResetPinNumber      = 54;  // !CHECK!
+pin_number kGRBL_FeedHoldPinNumber   = 55;  // !CHECK!
+pin_number kGRBL_CycleStartPinNumber = 56;  // !CHECK!
 
 pin_number kGRBL_CommonEnablePinNumber = 8;
 

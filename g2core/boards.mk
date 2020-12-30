@@ -165,16 +165,16 @@ endif
 
 ifeq ("$(CONFIG)","PrintNC-Mill-v1")
     ifeq ("$(BOARD)","NONE")
-        BOARD=RAMPS-FDv1a
+        BOARD=RAMPSFDv1a
     endif
-    SETTINGS_FILE="settings_printnc-mill.h"
+    SETTINGS_FILE="settings_printnc-millv1.h"
 endif
 
 ifeq ("$(CONFIG)","PrintNC-Laser-v1")
     ifeq ("$(BOARD)","NONE")
-        BOARD=RAMPS-FDv1a
+        BOARD=RAMPSFDv1a
     endif
-    SETTINGS_FILE="settings_printnc-laser.h"
+    SETTINGS_FILE="settings_printnc-laserv1.h"
 endif
 
 
