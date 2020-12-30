@@ -160,6 +160,25 @@ ifeq ("$(CONFIG)","EggBot")
     SETTINGS_FILE="settings_eggbot.h"
 endif
 
+##########
+# PrintNC configs:
+
+ifeq ("$(CONFIG)","PrintNC-Mill-v1")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=RAMPS-FDv1a
+    endif
+    SETTINGS_FILE="settings_printnc-mill.h"
+endif
+
+ifeq ("$(CONFIG)","PrintNC-Laser-v1")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=RAMPS-FDv1a
+    endif
+    SETTINGS_FILE="settings_printnc-laser.h"
+endif
+
+
+
 
 include $(wildcard ./board/$(STAR).mk)
 

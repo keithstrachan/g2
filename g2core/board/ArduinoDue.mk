@@ -11,7 +11,6 @@
 #   make CONFIG=ShapeokoDualY BOARD=gShield
 
 
-
 # Backward compatibility with old projects that use PLATFORM instead, but with a warning:
 ifneq ("$(PLATFORM:-)","")
     $(warning Using PLATFORM value of $(PLATFORM) as BOARD.)
@@ -43,6 +42,14 @@ ifeq ("$(BOARD)","shopbotShield")
     DEVICE_DEFINES += SETTINGS_FILE=${SETTINGS_FILE}
 endif
 
+ifeq ("$(BOARD)","RAMPS-FDv1a")
+    # This is a due with a RAMPS-FD v1a shield. We'll use the Due platform, but set defines
+    # for the code to get the pinout right.
+
+    BASE_BOARD = g2core-due
+    DEVICE_DEFINES += MOTATE_BOARD="RAMPS-FDv1a"
+    DEVICE_DEFINES += SETTINGS_FILE=${SETTINGS_FILE}
+endif
 
 
 ##########
