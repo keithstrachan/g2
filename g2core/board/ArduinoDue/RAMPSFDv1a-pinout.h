@@ -55,8 +55,8 @@
 #define INPUT12_AVAILABLE 1  // !CHECK!
 #define INPUT13_AVAILABLE 0  // !CHECK!
 
-#define ADC0_AVAILABLE 0  // !CHECK!
-#define ADC1_AVAILABLE 0  // !CHECK!
+#define ADC0_AVAILABLE 1  // !CHECK!
+#define ADC1_AVAILABLE 1  // !CHECK!
 #define ADC2_AVAILABLE 0  // !CHECK!
 #define ADC3_AVAILABLE 0  // !CHECK!
 
@@ -68,7 +68,7 @@
 #define TEMPERATURE_OUTPUT_ON 0  // !CHECK!
 
 // Some pins, if the PWM capability is turned on, it will cause timer conflicts.
-// So we have to explicity enable them as PWM pins.
+// So we have to explicitly enable them as PWM pins.
 // Generated with:
 // perl -e 'for($i=1;$i<14;$i++) { print "#define OUTPUT${i}_PWM 0\n";}'
 #define OUTPUT1_PWM 0  // !CHECK!
@@ -252,7 +252,7 @@ pin_number kOutput8_PinNumber  = -1;  // 137;     // See Coolant Enable
 pin_number kOutput9_PinNumber  = -1;  // <unassigned, available out>
 pin_number kOutput10_PinNumber = -1;  // DO_10: Fan2B_PWM
 
-pin_number kOutput11_PinNumber = -1;  // DO_11: Heted Bed FET
+pin_number kOutput11_PinNumber = -1;  // DO_11: heated Bed FET
 pin_number kOutput12_PinNumber = -1;  // DO_12: Indicator_LED
 pin_number kOutput13_PinNumber = -1;  // 142;
 pin_number kOutput14_PinNumber = -1;  // 143;
@@ -260,8 +260,8 @@ pin_number kOutput15_PinNumber = -1;  // 144;
 pin_number kOutput16_PinNumber = -1;  // 145;
 
 pin_number kADC0_PinNumber  = 54;  // Heated bed thermistor ADC
-pin_number kADC1_PinNumber  = 55;  // Extruder1_ADC
-pin_number kADC2_PinNumber  = 56;  // Extruder2_ADC
+pin_number kADC1_PinNumber  = -1;  // Extruder1_ADC
+pin_number kADC2_PinNumber  = -1;  // Extruder2_ADC
 pin_number kADC3_PinNumber  = -1;  // 153;
 pin_number kADC4_PinNumber  = -1;  // 154;
 pin_number kADC5_PinNumber  = -1;  // 155;
@@ -272,8 +272,8 @@ pin_number kADC9_PinNumber  = -1;  // 159;
 pin_number kADC10_PinNumber = -1;  // 160;
 pin_number kADC11_PinNumber = -1;  // 161;
 pin_number kADC12_PinNumber = -1;  // 162;
-pin_number kADC13_PinNumber = -1;  // Not physially pinned out
-pin_number kADC14_PinNumber = -1;  // Not physially pinned out
+pin_number kADC13_PinNumber = -1;  // Not physically pinned out
+pin_number kADC14_PinNumber = -1;  // Not physically pinned out
 
 
 // GRBL / gShield compatibility pins -- Due board ONLY
