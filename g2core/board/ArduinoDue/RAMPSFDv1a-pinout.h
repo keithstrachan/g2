@@ -55,8 +55,8 @@
 #define INPUT12_AVAILABLE 1  // !CHECK!
 #define INPUT13_AVAILABLE 0  // !CHECK!
 
-#define ADC0_AVAILABLE 1  // !CHECK!
-#define ADC1_AVAILABLE 1  // !CHECK!
+#define ADC0_AVAILABLE 0  // !CHECK!
+#define ADC1_AVAILABLE 0  // !CHECK!
 #define ADC2_AVAILABLE 0  // !CHECK!
 #define ADC3_AVAILABLE 0  // !CHECK!
 
@@ -65,7 +65,7 @@
 #define XIO_HAS_SPI 0  // !CHECK!
 #define XIO_HAS_I2C 0  // !CHECK!
 
-#define TEMPERATURE_OUTPUT_ON -1  // !CHECK!
+#define TEMPERATURE_OUTPUT_ON 0  // !CHECK!
 
 // Some pins, if the PWM capability is turned on, it will cause timer conflicts.
 // So we have to explicity enable them as PWM pins.
@@ -259,8 +259,8 @@ pin_number kOutput14_PinNumber = -1;  // 143;
 pin_number kOutput15_PinNumber = -1;  // 144;
 pin_number kOutput16_PinNumber = -1;  // 145;
 
-pin_number kADC0_PinNumber  = -1;  // Heated bed thermistor ADC
-pin_number kADC1_PinNumber  = -1;  // Extruder1_ADC
+pin_number kADC0_PinNumber  = 54;  // Heated bed thermistor ADC
+pin_number kADC1_PinNumber  = 55;  // Extruder1_ADC
 pin_number kADC2_PinNumber  = -1;  // Extruder2_ADC
 pin_number kADC3_PinNumber  = -1;  // 153;
 pin_number kADC4_PinNumber  = -1;  // 154;
