@@ -278,5 +278,24 @@ ifeq ("$(CONFIG)","fourcable")
     SETTINGS_FILE="settings_fourcable.h"
 endif
 
+##########
+# PrintNC configs:
+
+ifeq ("$(CONFIG)","PrintNC-Mill-v1")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=RAMPSFDv1a
+    endif
+    SETTINGS_FILE="settings_printnc-millv1.h"
+endif
+
+ifeq ("$(CONFIG)","PrintNC-Laser-v1")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=RAMPSFDv1a
+    endif
+    SETTINGS_FILE="settings_printnc-laserv1.h"
+endif
+
+
+
 include $(wildcard ./board/$(STAR).mk)
 
