@@ -230,7 +230,7 @@ pin_number kSpindle_EnablePinNumber = 12;
 pin_number kSpindle_DirPinNumber    = -1;  // 13;
 pin_number kSpindle_PwmPinNumber    = 8;   // !CHECK!
 pin_number kSpindle_Pwm2PinNumber   = 9;  // !CHECK!
-pin_number kCoolant_EnablePinNumber = 10;  // !CHECK!
+pin_number kCoolant_EnablePinNumber = 29;  // !CHECK!
 
 pin_number kSD_CardDetectPinNumber = -1;
 pin_number kInterlock_InPinNumber  = -1;
@@ -261,7 +261,7 @@ pin_number kOutput16_PinNumber = -1;  // 145;
 
 pin_number kADC0_PinNumber  = 54;  // Heated bed thermistor ADC
 pin_number kADC1_PinNumber  = 55;  // Extruder1_ADC
-pin_number kADC2_PinNumber  = -1;  // Extruder2_ADC
+pin_number kADC2_PinNumber  = 56;  // Extruder2_ADC
 pin_number kADC3_PinNumber  = -1;  // 153;
 pin_number kADC4_PinNumber  = -1;  // 154;
 pin_number kADC5_PinNumber  = -1;  // 155;
@@ -278,9 +278,12 @@ pin_number kADC14_PinNumber = -1;  // Not physially pinned out
 
 // GRBL / gShield compatibility pins -- Due board ONLY
 
-pin_number kGRBL_ResetPinNumber      = 54;  // !CHECK!
-pin_number kGRBL_FeedHoldPinNumber   = 55;  // !CHECK!
-pin_number kGRBL_CycleStartPinNumber = 56;  // !CHECK!
+// pin_number kGRBL_ResetPinNumber      = 54;  // !CHECK!
+// pin_number kGRBL_FeedHoldPinNumber   = 55;  // !CHECK!
+// pin_number kGRBL_CycleStartPinNumber = 56;  // !CHECK!
+pin_number kGRBL_ResetPinNumber      = 23;  // !CHECK!
+pin_number kGRBL_FeedHoldPinNumber   = 25;  // !CHECK!
+pin_number kGRBL_CycleStartPinNumber = 27;  // !CHECK!
 
 pin_number kGRBL_CommonEnablePinNumber = 8;
 
