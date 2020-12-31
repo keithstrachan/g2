@@ -1584,8 +1584,8 @@
       </ArmGccCpp>
     </ToolchainSettings>
     <UsesExternalMakeFile>True</UsesExternalMakeFile>
-    <BuildTarget>BOARD=RAMPSFDv1a CONFIG=RAMPSFDv1a COLOR=0 VERBOSE=1</BuildTarget>
-    <CleanTarget>clean BOARD=RAMPSFDv1a CONFIG=RAMPSFDv1a</CleanTarget>
+    <BuildTarget>BOARD=RAMPSFDv1a CONFIG=PrintNC-Mill-v1 COLOR=0 VERBOSE=1</BuildTarget>
+    <CleanTarget>clean BOARD=RAMPSFDv1a CONFIG=PrintNC-Mill-v1</CleanTarget>
     <ExternalMakeFilePath>Makefile</ExternalMakeFilePath>
     <OutputDirectory />
     <OutputPath>bin\RAMPSFDv1a\</OutputPath>
@@ -1793,6 +1793,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="settings\settings_makeblock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="settings\settings_printnc-laserv1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="settings\settings_printnc-millv1.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="settings\settings_printrbot_play.h">
